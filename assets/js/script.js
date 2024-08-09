@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("myForm");
       const formData = new FormData(form);
 
-      const url = "http://safe-homes-final/assets/php/send_email.php";
+      const url = "https://sandeepsolanki.co/assets/php/send_email.php";
       console.log("Sending request to: ", url); // Log the URL to the console
 
       fetch(url, {
