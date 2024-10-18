@@ -1,0 +1,86 @@
+body,
+html {
+  scroll-padding-top: 90px; /* Adjust according to the height of your navbar */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #fcfbf4 !important;
+}
+
+.custom-navbar {
+  background-color: white;
+}
+
+.nav-container {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar-nav .navbar-brand {
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-nav .nav-link {
+  padding: 20px 15px;
+  text-decoration: none;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+}
+.github-icon {
+  color: black;
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.github-icon:hover {
+  transform: scale(1.5); /* Adjust scale value as needed */
+}
+
+/* footer */
+footer {
+  background-color: #7fd6c1; /* Dark background color */
+  color: #000; /* Text color */
+  padding: 20px 0; /* Padding for the footer */
+  text-align: center; /* Center align the text */
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.github-link {
+  display: flex;
+  justify-content: center; /* Center align the content */
+  align-items: center;
+  gap: 10px; /* Space between the icon and text */
+}
+
+.github-link a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px; /* Adjust the font size if needed */
+}
+
+.github-link i {
+  font-size: 24px; /* Adjust icon size if needed */
+}
+
+.github-link a:hover {
+  color: #2e3a5a; /* Hover color */
+}
