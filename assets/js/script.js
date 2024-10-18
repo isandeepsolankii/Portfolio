@@ -48,36 +48,20 @@ function checkEmail() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("myForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
+  const form = document.querySelector("form[name='contactFormEmail']"); // Select the form by its name attribute
 
-      // Perform client-side validation
-      checkInputs();
+  form.addEventListener("submit", function (event) {
+    // Listen for the 'submit' event
+    event.preventDefault(); // Prevent the default form submission
 
-      // If the form is valid, proceed to send the data
-      const form = document.getElementById("myForm");
-      const formData = new FormData(form);
+    // Perform client-side validation
+    checkInputs();
 
-      const url = "http://127.0.0.1:5500/assets/php/send_email.php";
-      console.log("Sending request to: ", url); // Log the URL to the console
-
-      fetch(url, {
-        method: "POST",
-        body: formData,
-      })
-        .then((response) => response.text())
-        .then((data) => {
-          console.log("Form submission response:", data);
-          alert(data);
-        })
-        .catch((error) => {
-          console.error("Error during form submission:", error);
-        });
-    });
+    // Check if there are any input fields with the 'error' class
+    const errors = document.querySelectorAll(".error");
+    if (errors.length === 0) {
+      // If no errors, allow the form to be submitted
+      form.submit();
+    }
+  });
 });
-
-// designation change
-
-// typingEffect.js
