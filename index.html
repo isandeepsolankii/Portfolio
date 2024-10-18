@@ -456,6 +456,7 @@
                 name="contactFormEmail"
                 style="text-align: left"
                 method="POST"
+                action="./assets/php/send_email.php"
               >
                 <div class="row">
                   <label for="inputName" class="form-label">
@@ -464,7 +465,7 @@
                   <div class="field">
                     <input
                       type="text"
-                      name="full_name"
+                      name="inputName"
                       class="form-control item"
                       id="inputName"
                       aria-describedby="basic-addon1"
@@ -478,7 +479,7 @@
                   <div class="field">
                     <input
                       type="text"
-                      name="email_address"
+                      name="inputEmail"
                       class="form-control item"
                       id="inputEmail"
                       aria-describedby="emailHelp"
@@ -493,16 +494,19 @@
                 <div class="field-comment">
                   <textarea
                     id="inputComments"
-                    name="other_comments"
+                    name="inputComments"
                     class="form-control item-comment"
                     aria-label="With textarea"
                     placeholder="Type Your Message Here..."
                     rows="5"
                   ></textarea>
                 </div>
-                <button type="submit" class="btn btn-warning submit-btn">
-                  Submit
-                </button>
+                <input
+                  type="submit"
+                  class="btn btn-warning submit-btn"
+                  name="send"
+                  value="Send"
+                />
               </form>
             </div>
           </div>
